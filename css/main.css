@@ -213,43 +213,45 @@ body {
     height: 365px;
 }
 
-.news-content  .thumbnail a img {
+.news-content .thumbnail a img {
     font-size: 20px;
     width: 100%;
     height: 68%;
 }
 
-.news-content  .thumbnail a img:hover {
+.news-content .thumbnail a img:hover {
     opacity: 0.7;
 }
 
-.news-content  .thumbnail a .news-text {
+.news-content .thumbnail a .news-text {
     height: 32%;
 }
 
-.news-content  .thumbnail .title {
+.news-content .thumbnail .title {
     padding-bottom: 10px;
     font-size: 20px;
 }
 
-.news-content  .thumbnail p {
+.news-content .thumbnail p {
     font-size: 15px;
 }
 
-.news-content  .thumbnail p a {
+.news-content .thumbnail p a {
     color: green;
     font-size: 14px;
 }
 
-.news-content  .thumbnail p .news-time {
+.news-content .thumbnail p .news-time {
     margin-left: 10px;
 }
 
-.news-content  .thumbnail .news-text {
+.news-content .thumbnail .news-text {
     margin: 0;
 }
 
+
 /*end news*/
+
 
 /*movies*/
 
@@ -274,7 +276,7 @@ body {
     top: 0;
     width: 100%;
     height: 40px;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .movies-thumbnail-wrap .des-top p {
@@ -288,8 +290,8 @@ body {
     top: 310px;
     width: 100%;
     padding: 10px;
-    color: hsla(0,0%,100%,.8);
-    background-color: rgba(0,0,0,.6);
+    color: hsla(0, 0%, 100%, .8);
+    background-color: rgba(0, 0, 0, .6);
     transition: all .5s;
 }
 
@@ -299,8 +301,50 @@ body {
 }
 
 
-
 /*end movies*/
+
+
+/*pictures*/
+
+.picture-contents {
+    /*padding: ;*/
+}
+
+.picture-contents .picture-list li {
+    float: left;
+    width: 398px;
+    margin-right: 5px;
+}
+
+.picture-contents .picture-list li:nth-child(3n) {
+    margin-right: 0;
+}
+/*bootstrap只设置宽度，高度也改变了*/
+
+.picture-contents .picture-list img {
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end picture*/
 
 
 /*end*/
