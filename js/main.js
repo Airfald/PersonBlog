@@ -6,6 +6,7 @@ $(function () {
         function init() {
             hideCover();
             showTime();
+            handleTime();
             // setBackground();
         }
 
@@ -23,6 +24,21 @@ $(function () {
         //         }
         //     });
         // }
+
+        function handleTime() {
+            var date = new Date();
+            if(date.getHours() > 5 && date.getHours() < 10) {
+                $('.content h2').text('早上好');
+            } else if(date.getHours() > 10 && date.getHours() < 14) {
+                $('.content h2').text('中午好');
+            } else if(date.getHours() > 14 && date.getHours() < 19) {
+                $('.content h2').text('下午好');
+            } else if(date.getHours() > 19 && date.getHours() < 24) {
+                $('.content h2').text('晚上好');
+            } else if(date.getHours() > 0 && date.getHours() < 5) {
+                $('.content h2').text('迎接新的一天');
+            }
+        }
 
         function hideCover() {
             $('.cover').animate({
