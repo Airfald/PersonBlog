@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>立方体动画</title>
+<style type="text/css">
+body,div,p,ul,ol,li,dl,dt,dd,table,tr,td,form,hr,fieldset,h1,h2,h3,h4,h5,h6,img,input {
+	margin:0;
+	padding:0;
+}
+html,body {
+	height: 100%;
+}
+body{
+	background: url(img/body_bg.png) repeat-x;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box{
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	animation:lft_ani 8s infinite linear;
+}
+.box a{
+	display: block;
+	opacity: .4;
+	border: 1px solid black;
+	transform-style:preserve-3d;
+}
+.box .small{
+	width: 100px;
+	height: 100px;
+	background: #18fa07;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+.box .big{
+	width: 200px;
+	height: 200px;
+	background:#2501fd;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 1s;
+}
+ 
+.box .big:nth-of-type(1){
+	transform:translateZ(100px);
+}
+.box .big:nth-of-type(2){
+	transform:translateZ(-100px);
+}
+.box .big:nth-of-type(3){
+	transform:rotateY(-90deg) translateZ(100px);
+}
+.box .big:nth-of-type(4){
+	transform:rotateY(90deg) translateZ(100px);
+}
+.box .big:nth-of-type(5){
+	transform:rotateX(90deg) translateZ(100px);
+}
+.box .big:nth-of-type(6){
+	transform:rotateX(-90deg) translateZ(100px);
+}
+ 
+.box:hover .big:nth-of-type(1){
+	transform:translateZ(150px);
+}
+.box:hover .big:nth-of-type(2){
+	transform:translateZ(-150px);
+}
+.box:hover .big:nth-of-type(3){
+	transform:rotateY(-90deg) translateZ(150px);
+}
+.box:hover .big:nth-of-type(4){
+	transform:rotateY(90deg) translateZ(150px);
+}
+.box:hover .big:nth-of-type(5){
+	transform:rotateX(90deg) translateZ(150px);
+}
+.box:hover .big:nth-of-type(6){
+	transform:rotateX(-90deg) translateZ(150px);
+}
+ 
+.box:hover{
+	animation:lft_ani 8s infinite linear paused;
+}
+
+.box .small:nth-of-type(7){
+	transform:translateZ(50px);
+}
+.box .small:nth-of-type(8){
+	transform:translateZ(-50px);
+}
+.box .small:nth-of-type(9){
+	transform:rotateY(-90deg) translateZ(50px);
+}
+.box .small:nth-of-type(10){
+	transform:rotateY(90deg) translateZ(50px);
+}
+.box .small:nth-of-type(11){
+	transform:rotateX(90deg) translateZ(50px);
+}
+.box .small:nth-of-type(12){
+	transform:rotateX(-90deg) translateZ(50px);
+}
+
+@keyframes lft_ani{
+	0%{
+		transform:rotateX(0deg) rotateY(0deg);
+	}
+	100%{
+		transform:rotateX(360deg) rotateY(360deg);
+	}
+}
+
+</style>
+</head>
+<body>
+	<div class="box">
+		<a href="#" class="big"></a>
+		<a href="#" class="big"></a>
+		<a href="#" class="big"></a>
+		<a href="#" class="big"></a>
+		<a href="#" class="big"></a>
+		<a href="#" class="big"></a>
+		<a href="#" class="small"></a>
+		<a href="#" class="small"></a>
+		<a href="#" class="small"></a>
+		<a href="#" class="small"></a>
+		<a href="#" class="small"></a>
+		<a href="#" class="small"></a>
+	</div>
+</body>
+</html>
